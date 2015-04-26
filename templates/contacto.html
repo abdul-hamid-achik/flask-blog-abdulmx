@@ -1,0 +1,28 @@
+
+{% extends "index.html" %}
+ 
+{% block body %}
+<div class="espacio">
+    {% for message in get_flashed_messages() %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+  <h2>Contact</h2>
+  <form action="{{ url_for('contacto') }}" method='post'>
+    {{ form.hidden_tag() }}
+ 
+    {{ form.nombre.label }}
+    {{ form.nombre }}
+ 
+    {{ form.email.label }}
+    {{ form.email }}
+ 
+    {{ form.asunto.label }}
+    {{ form.asunto }}
+ 
+    {{ form.mensaje.label }}
+    {{ form.mensaje }}
+ 
+    {{ form.enviar }}
+  </form>
+<div>
+{% endblock %}

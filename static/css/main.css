@@ -4,7 +4,9 @@ body {
     min-width:320px;
 }
 #wrapper {min-height: 100%;}
-.container {padding-bottom: 100px;}
+.container {
+    padding-bottom: 100px;
+}
 
 .post {margin-top:2em;}
 .post img {
@@ -46,7 +48,15 @@ footer {
     height: 35px;
     margin-top: -35px;
 }
-footer .container {padding-bottom:0;}
+footer .container {
+
+    position:absolute;
+    width:100%;
+    display:block;
+    background:black;
+    margin-top:78px;
+    padding:50px;
+}
 footer p {
     clear:left;
     color: #d6d8dd;
@@ -160,4 +170,83 @@ input[type='checkbox'] {
 }
 @media only screen and (max-width: 767px) {
     .search-form {width:100%;}
+}
+}
+
+#imagen-abs{
+    width: 30%;
+}
+.espacio{
+
+    margin-top:90px;
+}
+
+/* Contact form */
+form label {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  padding: 10px 0;
+}
+ 
+form input#nombre,
+form input#email,
+form input#asunto {
+  width: 400px;
+  background-color: #fafafa;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border: 1px solid #cccccc;
+  padding: 5px;
+  font-size: 1.1em;
+}
+ 
+form textarea#mensaje {
+  width: 500px;
+  height: 100px;
+  background-color: #fafafa;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border: 1px solid #cccccc;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 1.1em;
+}
+ 
+form input#enviar {
+  display: block;
+  -webkit-border-radius: 3px; 
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border:1px solid #d8d8d8;
+  padding: 10px; 
+  font-weight:bold; 
+  text-align: center; 
+  color: #000000; 
+  background-color: #f4f4f4;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e5e5e5));
+  background-image: -webkit-linear-gradient(top, #f4f4f4, #e5e5e5);
+  background-image: -moz-linear-gradient(top, #f4f4f4, #e5e5e5);
+  background-image: -ms-linear-gradient(top, #f4f4f4, #e5e5e5);
+  background-image: -o-linear-gradient(top, #f4f4f4, #e5e5e5);
+  background-image: linear-gradient(top, #f4f4f4, #e5e5e5);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f4f4f4, endColorstr=#e5e5e5);
+}
+ 
+form input#enviar:hover{
+  cursor: pointer;
+  border:1px solid #c1c1c1; 
+  background-color: #dbdbdb;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dbdbdb), color-stop(100%, #cccccc));
+  background-image: -webkit-linear-gradient(top, #dbdbdb, #cccccc);
+  background-image: -moz-linear-gradient(top, #dbdbdb, #cccccc);
+  background-image: -ms-linear-gradient(top, #dbdbdb, #cccccc);
+  background-image: -o-linear-gradient(top, #dbdbdb, #cccccc);
+  background-image: linear-gradient(top, #dbdbdb, #cccccc);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#dbdbdb, endColorstr=#cccccc);
+}
+.flash {
+  background-color: #FBB0B0;
+  padding: 10px;
+  width: 400px;
 }

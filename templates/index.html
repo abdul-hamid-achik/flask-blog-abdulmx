@@ -17,7 +17,7 @@
 										</div>
 										<div class="content no-lightbox">
 											{%- if post['preview'] -%}
-												{{ post['preview']|markdown }}
+												{{ post['preview'] | markdown}}
 											{%- else -%}
 												{{ post['body']|markdown }}
 											{%- endif -%}

@@ -2,26 +2,42 @@ import cgi
 import os
 from flask import Flask, render_template, abort, url_for, request, flash, session, redirect
 from flaskext.markdown import Markdown
+from form import ContactForm
 from mdx_github_gists import GitHubGistExtension
 from mdx_strike import StrikeExtension
 from mdx_quote import QuoteExtension
 from mdx_code_multiline import MultilineCodeExtension
 from werkzeug.contrib.atom import AtomFeed
+from flask_mail import Mail, Message
+from flask_errormail import mail_on_500
+from flask.ext.restful import Api, Resource
 import post
 import user
 import pagination
 import settings
 from helper_functions import *
 
-
-app = Flask('FlaskBlog')
+mail = Mail()
+ADMINISTRATORS = (
+    'abdul@pyheart.com',
+)
+app = Flask(__name__)
+app.secret_key = 'development key'
+mail_on_500(app, ADMINISTRATORS)
 md = Markdown(app)
 md.register_extension(GitHubGistExtension)
 md.register_extension(StrikeExtension)
 md.register_extension(QuoteExtension)
 md.register_extension(MultilineCodeExtension)
 app.config.from_object('config')
-
+app.config.update(dict(
+    MAIL_SERVER='p3plcpnl0863.prod.phx3.secureserver.net',
+    MAIL_PORT=465,
+    MAIL_USE_TLS=False,
+    MAIL_USE_SSL=True,
+    MAIL_USERNAME='abdul@pyheart.com',
+    MAIL_PASSWORD='aa121292',))
+mail.init_app(app)
 
 @app.route('/', defaults={'page': 1})
 @app.route('/page-<int:page>')
@@ -434,6 +450,9 @@ def page_not_found(error):
 def format_datetime_filter(input_value, format_="%a, %d %b %Y"):
     return input_value.strftime(format_)
 
+# @app.route('/curriculum')
+# def cv():
+#     return render_template('curriculum.html')
 
 settingsClass = settings.Settings(app.config)
 postClass = post.Post(app.config)
