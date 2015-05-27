@@ -1,6 +1,6 @@
 import cgi
 import os
-from flask import Flask, render_template, abort, url_for, request, flash, session, redirect
+from flask import Flask, render_template, abort, url_for, request, flash, session, redirect, send_from_directory, current_app as app
 from flaskext.markdown import Markdown
 from form import ContactForm
 from mdx_github_gists import GitHubGistExtension
@@ -60,6 +60,11 @@ def posts_by_tag(tag, page):
     pag = pagination.Pagination(page, app.config['PER_PAGE'], count)
     return render_template('index.html', posts=posts['data'], pagination=pag, meta_title='Posts by tag: ' + tag)
 
+
+@app.route('/curriculum')
+def curriculum():
+    
+    return redirect('/static/cv_english.pdf')
 
 @app.route('/post/<permalink>')
 def single_post(permalink):

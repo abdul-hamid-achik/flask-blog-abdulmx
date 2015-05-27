@@ -47,12 +47,12 @@ footer {
     color: #cccccc;
     height: 35px;
     margin-top: -35px;
+
 }
 footer .container {
 
     position:absolute;
     width:100%;
-    display:block;
     background:black;
     margin-top:78px;
     padding:50px;
