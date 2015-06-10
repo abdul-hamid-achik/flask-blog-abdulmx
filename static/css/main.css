@@ -44,7 +44,7 @@ body {
 .page-header h1,.splash h1 {font-size:4em;}
 
 footer {
-    color: #cccccc;
+    color: black;
     height: 35px;
     margin-top: -35px;
 
@@ -53,16 +53,15 @@ footer .container {
 
     position:absolute;
     width:100%;
-    background:black;
     margin-top:78px;
     padding:50px;
 }
 footer p {
     clear:left;
-    color: #d6d8dd;
+    color: #8f8f8f;
     font-size: 12px;
 }
-footer a {color: #d6d8dd;}
+footer a {color: #8f8f8f;}
 
 .sidebar {
 	float: right;
@@ -188,7 +187,7 @@ form label {
   display: block;
   padding: 10px 0;
 }
- 
+
 form input#nombre,
 form input#email,
 form input#asunto {
@@ -201,7 +200,7 @@ form input#asunto {
   padding: 5px;
   font-size: 1.1em;
 }
- 
+
 form textarea#mensaje {
   width: 500px;
   height: 100px;
@@ -214,17 +213,17 @@ form textarea#mensaje {
   padding: 5px;
   font-size: 1.1em;
 }
- 
+
 form input#enviar {
   display: block;
-  -webkit-border-radius: 3px; 
+  -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
   border:1px solid #d8d8d8;
-  padding: 10px; 
-  font-weight:bold; 
-  text-align: center; 
-  color: #000000; 
+  padding: 10px;
+  font-weight:bold;
+  text-align: center;
+  color: #000000;
   background-color: #f4f4f4;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e5e5e5));
   background-image: -webkit-linear-gradient(top, #f4f4f4, #e5e5e5);
@@ -233,10 +232,10 @@ form input#enviar {
   background-image: -o-linear-gradient(top, #f4f4f4, #e5e5e5);
   background-image: linear-gradient(top, #f4f4f4, #e5e5e5);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f4f4f4, endColorstr=#e5e5e5);
 }
- 
+
 form input#enviar:hover{
   cursor: pointer;
-  border:1px solid #c1c1c1; 
+  border:1px solid #c1c1c1;
   background-color: #dbdbdb;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dbdbdb), color-stop(100%, #cccccc));
   background-image: -webkit-linear-gradient(top, #dbdbdb, #cccccc);

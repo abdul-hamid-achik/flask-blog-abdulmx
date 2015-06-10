@@ -33,4 +33,4 @@ else:
 
 LOG_FILE = "app.log"
 
-DEBUG = False  # set it to False on production
+DEBUG = True  # set it to False on production

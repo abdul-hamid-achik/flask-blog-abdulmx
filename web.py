@@ -63,7 +63,7 @@ def posts_by_tag(tag, page):
 
 @app.route('/curriculum')
 def curriculum():
-    
+
     return redirect('/static/cv_english.pdf')
 
 @app.route('/post/<permalink>')
@@ -458,6 +458,10 @@ def format_datetime_filter(input_value, format_="%a, %d %b %Y"):
 # @app.route('/curriculum')
 # def cv():
 #     return render_template('curriculum.html')
+
+@app.route('/tec_laguna')
+def tec_laguna():
+    return render_template('tec_laguna.html')
 
 settingsClass = settings.Settings(app.config)
 postClass = post.Post(app.config)

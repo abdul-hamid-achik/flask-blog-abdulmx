@@ -1,0 +1,13 @@
+{
+	"titulo": "PROCEDIMIENTO DE SELECCIÓN DE ASPIRANTES",
+    "objetivo":"Los aspirantes deberán aprobar  exámenes de admisión en las áreas:",
+    "datos":[
+        "Matemáticas",
+        "Probabilidad y Estadística",
+        "Psicometrico",
+        "Lectura de comprensión de textos en ingles",
+        "Computación",
+        "Entrevistas con profesores del Comité de admisión."
+      ]
+
+}
